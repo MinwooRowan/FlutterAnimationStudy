@@ -5,71 +5,52 @@ class SizeAnimation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              child: Wrap(
+    return const Scaffold(
+      body: Center(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                child: Wrap(
+                  alignment: WrapAlignment.spaceBetween,
+                  direction: Axis.horizontal,
+                  spacing: 4,
+                  runSpacing: 12,
+                  children: [
+                    CircleWidget(color: Colors.green),
+                    CircleWidget(color: Colors.red),
+                    CircleWidget(color: Colors.amber),
+                    CircleWidget(color: Colors.blue),
+                  ],
+                ),
+              ),
+              Wrap(
                 alignment: WrapAlignment.spaceBetween,
                 direction: Axis.horizontal,
                 spacing: 4,
                 runSpacing: 12,
                 children: [
-                  CircleWidget(color: Colors.green),
-                  CircleWidget(color: Colors.red),
-                  CircleWidget(color: Colors.amber),
-                  CircleWidget(color: Colors.blue),
+                  CircleWidget(color: Colors.orange),
+                  CircleWidget(color: Colors.teal),
+                  CircleWidget(color: Colors.yellow),
                 ],
               ),
-            ),
-            Wrap(
-              alignment: WrapAlignment.spaceBetween,
-              direction: Axis.horizontal,
-              spacing: 4,
-              runSpacing: 12,
-              children: [
-                CircleWidget(color: Colors.orange),
-                CircleWidget(color: Colors.teal),
-                CircleWidget(color: Colors.yellow),
-              ],
-            ),
-            Wrap(
-              alignment: WrapAlignment.spaceBetween,
-              direction: Axis.horizontal,
-              spacing: 4,
-              runSpacing: 12,
-              children: [
-                CircleWidget(color: Colors.pinkAccent),
-                CircleWidget(color: Colors.teal),
-                CircleWidget(color: Colors.amber),
-                CircleWidget(color: Colors.yellow),
-              ],
-            ),
-            // Padding(
-            //   padding: EdgeInsets.only(left: 48),
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //     children: [
-            // CircleWidget(color: Colors.red),
-            // CircleWidget(color: Colors.amber),
-            // CircleWidget(color: Colors.blue),
-            // CircleWidget(color: Colors.green),
-            //     ],
-            //   ),
-            // ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //   children: [
-            //     CircleWidget(color: Colors.red),
-            //     CircleWidget(color: Colors.amber),
-            //     CircleWidget(color: Colors.blue),
-            //     CircleWidget(color: Colors.green),
-            //   ],
-            // ),
-          ],
+              Wrap(
+                alignment: WrapAlignment.spaceBetween,
+                direction: Axis.horizontal,
+                spacing: 4,
+                runSpacing: 12,
+                children: [
+                  CircleWidget(color: Colors.pinkAccent),
+                  CircleWidget(color: Colors.teal),
+                  CircleWidget(color: Colors.amber),
+                  CircleWidget(color: Colors.yellow),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
